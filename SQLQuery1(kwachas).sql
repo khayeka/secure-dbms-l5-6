@@ -40,7 +40,7 @@ GO
 
 INSERT INTO  WORKERS(ID,Name)
 VALUES
-(1, 'LIVIO'),
+(1, 'STEPHEN'),
 (2, 'VICTOR');
 
 
