@@ -1,4 +1,5 @@
-
+--Victer Muuo
+--52010
 CREATE DATABASE kwacha_test;
 GO
 
