@@ -5,11 +5,11 @@ USE kwachas_test;
 GO
 
 --CREATE LOGINS--
-CREATE LOGIN admin_user WITH PASSWORD = 'Admin@1234';
+CREATE LOGIN admin_user WITH PASSWORD = 'Admin@4321';
 GO
-CREATE LOGIN readonly_user WITH PASSWORD = 'Random@1234';
+CREATE LOGIN readonly_user WITH PASSWORD = 'Random@4321';
 GO
-CREATE LOGIN insertupdate_user WITH PASSWORD = 'Insert@1234';
+CREATE LOGIN insertupdate_user WITH PASSWORD = 'Insert@4321';
 GO
 
 --CREATE USERS--
@@ -30,7 +30,7 @@ GO
 --DELETE BLOCK --
 DENY DELETE ON SCHEMA:: dbo TO readonly_user;
 DENY DELETE ON SCHEMA :: dbo TO insertupdate_user;
-DENY ALTER ON SCHEMA  :: dbo TO readonly_user;
+XDENY ALTER ON SCHEMA  :: dbo TO readonly_user;
 DENY ALTER ON SCHEMA ::dbo TO inserupdate_user;
 
 CREATE TABLE WORKERS(
@@ -40,8 +40,8 @@ GO
 
 INSERT INTO  WORKERS(ID,Name)
 VALUES
-(1, 'STEPHEN'),
-(2, 'VICTOR');
+(1, 'EMMAH'),
+(2, 'PASCAL');
 
 
 SELECT * FROM WORKERS
@@ -70,7 +70,7 @@ GO
  --ENCYPTION--
  USE master;
  GO
- CREATE MASTER KEY ENCYPTION BY PASSWORD = 'Admin@1234';
+ CREATE MASTER KEY ENCYPTION BY PASSWORD = 'Admin@4321';
  GO
   
   --CREATE CERTIFICATE-
@@ -81,7 +81,7 @@ GO
  BACKUP CERTIFICATE BackupCert TO FILE = 'C: \Backup\BackupCert.cer' WITH PRIVATE KEY
    (   
       FILE = 'C:\Backup\BackupCert.pvk',
-      ENCRYPTION BY PASSWORD = 'Admin@1234'
+      ENCRYPTION BY PASSWORD = 'Admin@4321'
     );
     GO
 
