@@ -1,3 +1,4 @@
+--mbaria John
 -- Create Database
 CREATE DATABASE kwacha_test;
 GO
